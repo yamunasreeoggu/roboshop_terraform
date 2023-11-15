@@ -6,6 +6,7 @@ variable "components" {
     "cart",
     "shipping",
     "payment",
+    "dispatch",
     "mongodb",
     "mysql",
     "rabbitmq",
