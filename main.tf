@@ -52,3 +52,4 @@ resource "null_resource" "set-hostname" { # required to set hostname to instance
     ]
   }
 }
+//
