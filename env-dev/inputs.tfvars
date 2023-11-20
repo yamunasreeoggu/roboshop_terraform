@@ -19,4 +19,8 @@ rds_instance_class     = "db.t3.medium"
 
 #DOCDB
 docdb_instance_class   = "db.t3.medium"
-docdb_instance_count   = "1"
+docdb_instance_count   = 1
+
+# Elastic_cache
+ec_node_type = "cache.t3.micro"
+ec_node_count = 1
