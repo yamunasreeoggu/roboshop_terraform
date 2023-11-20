@@ -18,5 +18,5 @@ default_route_table_id = "rtb-0cd5d19506508373c"
 rds_instance_class     = "db.t3.medium"
 
 #DOCDB
-docdb_instance_class   = "db.r5.large"
+docdb_instance_class   = "db.t3.medium"
 docdb_instance_count   = "1"
