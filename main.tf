@@ -20,7 +20,7 @@ module "mysql" {
   subnets   = module.vpc.db_subnets
   vpc_cidr  = var.vpc_cidr
   vpc_id    = module.vpc.vpc_id
-  instance_class = var.instance_class
+  rds_instance_class = var.rds_instance_class
   kms_key_id = var.kms_key_id
 }
 
@@ -31,6 +31,7 @@ module "docdb" {
   subnets   = module.vpc.db_subnets
   vpc_cidr  = var.vpc_cidr
   vpc_id    = module.vpc.vpc_id
-  instance_class = var.instance_class
   kms_key_id = var.kms_key_id
+  docdb_instance_class = var.docdb_instance_class
+  docdb_instance_count = var.docdb_instance_count
 }
