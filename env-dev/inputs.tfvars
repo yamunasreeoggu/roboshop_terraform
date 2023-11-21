@@ -23,4 +23,4 @@ docdb_instance_count   = 1
 
 # Elastic_cache
 ec_node_type = "cache.t3.micro"
-ec_node_count = 1
+ec_node_count = 2
