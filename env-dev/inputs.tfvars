@@ -69,3 +69,13 @@ components = {
     app_port = 8080
   }
 }
+
+# Load balancer
+alb = {
+  public = {
+    internal = false
+  }
+  private = {
+    internal = true
+  }
+}
