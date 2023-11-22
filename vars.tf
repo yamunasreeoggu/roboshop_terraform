@@ -1,5 +1,6 @@
 variable "vpc_cidr" {}
 variable "env" {}
+variable "project_name" {}
 variable "public_subnets" {}
 variable "web_subnets" {}
 variable "app_subnets" {}
