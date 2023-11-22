@@ -89,6 +89,6 @@ module "alb" {
   zone_id           = "Z10281701O26X6KFZM8G8"
 }
 
-output "ms" {
-  value = module.ms-components
+output "alb" {
+  value = module.alb
 }
