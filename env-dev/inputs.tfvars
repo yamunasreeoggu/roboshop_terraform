@@ -74,8 +74,16 @@ components = {
 alb = {
   public = {
     internal = false
+    port = 443
+    protocol = "HTTPS"
+    ssl_policy        = "ELBSecurityPolicy-2016-08"
+    certificate_arn   = "arn:aws:acm:us-east-1:492681564023:certificate/ea2dec62-a84a-40c8-a40d-ef3c8ce2e6de"
   }
   private = {
     internal = true
+    port = 80
+    protocol = "HTTP"
+    ssl_policy        = null
+    certificate_arn   = null
   }
 }
