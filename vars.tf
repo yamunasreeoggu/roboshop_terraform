@@ -19,3 +19,5 @@ variable "rabbitmq_instance_type" {}
 variable "components" {}
 variable "prometheus_cidr" {}
 variable "workstation_node_cidr" {}
+variable "instance_type" {}
+variable "app_port" {}
