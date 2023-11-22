@@ -15,3 +15,4 @@ variable "docdb_instance_class" {}
 variable "docdb_instance_count" {}
 variable "ec_node_type" {}
 variable "ec_node_count" {}
+variable "rabbitmq_instance_type" {}

@@ -47,3 +47,14 @@ module "elasticache" {
   ec_node_type  = var.ec_node_type
   ec_node_count = var.ec_node_count
 }
+
+module "rabbitmq" {
+  source    = "git::https://github.com/yamunasreeoggu/tf_module_rabbitmq.git"
+  component = "rabbitmq"
+  env       = var.env
+  subnets   = module.vpc.db_subnets
+  vpc_cidr  = var.vpc_cidr
+  vpc_id    = module.vpc.vpc_id
+  kms_key_id = var.kms_key_id
+  rabbitmq_instance_type = var.rabbitmq_instance_type
+}
