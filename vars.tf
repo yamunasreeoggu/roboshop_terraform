@@ -16,3 +16,6 @@ variable "docdb_instance_count" {}
 variable "ec_node_type" {}
 variable "ec_node_count" {}
 variable "rabbitmq_instance_type" {}
+variable "components" {}
+variable "prometheus_cidr" {}
+variable "workstation_node_cidr" {}

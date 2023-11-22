@@ -1,6 +1,8 @@
 env          = "dev"
 project_name = "roboshop"
 kms_key_id   = "arn:aws:kms:us-east-1:492681564023:key/e0d7eb6d-885f-412f-b2b6-3352d09b052a"
+workstation_node_cidr = [ "172.31.23.171/32" ]
+prometheus_cidr = [ "172.31.95.19/32"]
 
 # VPC
 vpc_cidr               = "10.0.0.0/16"
@@ -27,3 +29,29 @@ ec_node_count = 2
 
 # Rabbitmq
 rabbitmq_instance_type = "t3.micro"
+
+# Components
+
+components = {
+  frontend = {
+    count = 1
+  }
+  catalogue = {
+    count = 1
+  }
+  cart = {
+    count = 1
+  }
+  user = {
+    count = 1
+  }
+  shipping = {
+    count = 1
+  }
+  payment = {
+    count = 1
+  }
+  dispatch = {
+    count = 1
+  }
+}
