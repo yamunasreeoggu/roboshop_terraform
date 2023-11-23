@@ -76,6 +76,8 @@ module "ms-components" {
   app_port = each.value["app_port"]
   alb_dns_name = lookup(lookup(module.alb, each.value["lb_type"], null), "alb_dns_name", null)
   zone_id = "Z10281701O26X6KFZM8G8"
+  listener_arn = lookup(lookup(module.alb, each.value["lb_type"], null), "listener_arn", null)
+  listener_rule_priority = each.value ["listener_rule_priority"]
 }
 
 module "alb" {
