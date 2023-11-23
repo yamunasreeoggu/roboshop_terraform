@@ -37,36 +37,43 @@ components = {
     count = 1
     instance_type = "t3.micro"
     app_port = 80
+    lb_type = "public"
   }
   catalogue = {
     count = 1
     instance_type = "t3.micro"
     app_port = 8080
+    lb_type = "private"
   }
   cart = {
     count = 1
     instance_type = "t3.micro"
     app_port = 8080
+    lb_type = "private"
   }
   user = {
     count = 1
     instance_type = "t3.micro"
     app_port = 8080
+    lb_type = "private"
   }
   shipping = {
     count = 1
     instance_type = "t3.micro"
     app_port = 8080
+    lb_type = "private"
   }
   payment = {
     count = 1
     instance_type = "t3.micro"
     app_port = 8080
+    lb_type = "private"
   }
   dispatch = {
     count = 1
     instance_type = "t3.micro"
     app_port = 8080
+    lb_type = "private"
   }
 }
 
