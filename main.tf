@@ -74,7 +74,7 @@ module "ms-components" {
   workstation_node_cidr = var.workstation_node_cidr
   instance_type = each.value["instance_type"]
   app_port = each.value["app_port"]
-  alb_dns_name = lookup(module.alb, each.value["lb_type"], null)
+  alb_dns_name = lookup(lookup(module.alb, each.value["lb_type"], null), "alb_dns_name", null)
   zone_id = "Z10281701O26X6KFZM8G8"
 }
 
