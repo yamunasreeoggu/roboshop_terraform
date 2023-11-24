@@ -88,15 +88,12 @@ module "alb" {
   env               = var.env
   internal          = each.value["internal"]
   vpc_id            = module.vpc.vpc_id
-  subnets           = module.vpc.app_subnets
-  dns_name          = "backend-${var.env}.yamunadevops.online"
-  zone_id           = "Z10281701O26X6KFZM8G8"
+  subnets           = each.key == "private" ? module.vpc.app_subnets : module.vpc.public_subnets
   port              = each.value["port"]
   protocol          = each.value["protocol"]
   ssl_policy        = each.value["ssl_policy"]
   certificate_arn   = each.value["certificate_arn"]
 }
-
 
 
 output "alb" {
