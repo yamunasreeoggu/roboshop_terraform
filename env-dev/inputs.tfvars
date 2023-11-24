@@ -92,6 +92,7 @@ alb = {
     protocol = "HTTPS"
     ssl_policy        = "ELBSecurityPolicy-2016-08"
     certificate_arn   = "arn:aws:acm:us-east-1:492681564023:certificate/ea2dec62-a84a-40c8-a40d-ef3c8ce2e6de"
+    alb_sg_allow_cidr = "0.0.0.0/0"
   }
   private = {
     internal = true
@@ -99,5 +100,6 @@ alb = {
     protocol = "HTTP"
     ssl_policy        = null
     certificate_arn   = null
+    alb_sg_allow_cidr = "10.0.0.0/16"
   }
 }
