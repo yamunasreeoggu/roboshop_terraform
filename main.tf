@@ -60,6 +60,7 @@ module "rabbitmq" {
 }
 
 module "ms-components" {
+  depends_on = [module.docdb, module.mysql, module.elasticache, module.rabbitmq]
   source    = "git::https://github.com/yamunasreeoggu/tf_module_app.git"
 
   for_each  = var.components
