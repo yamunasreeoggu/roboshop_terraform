@@ -58,6 +58,7 @@ module "rabbitmq" {
   kms_key_id = var.kms_key_id
   rabbitmq_instance_type = var.rabbitmq_instance_type
   zone_id = "Z10281701O26X6KFZM8G8"
+  workstation_node_cidr = var.workstation_node_cidr
 }
 
 module "ms-components" {
